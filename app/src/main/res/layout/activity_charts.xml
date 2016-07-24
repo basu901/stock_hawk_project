@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linear1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:text="@string/Stock_Symbol"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stock_symbol"
+                    android:layout_margin="32dp"
+                    android:textSize="25sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear1"
+                android:id="@+id/linear2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/start_date"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/start_date"
+                    android:layout_marginTop="16dp"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear2"
+                android:id="@+id/linear3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/end_date"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/end_date"
+                    android:layout_marginTop="16dp"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <com.db.chart.view.LineChartView
+                tools:context="com.sam_chordas.android.stockhawk.ui.Charts"
+                android:id="@+id/linechart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/linear3"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
